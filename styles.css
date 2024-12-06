@@ -80,6 +80,13 @@ body {
   display: none;
 }
 
+.successful{
+  color: rgb(12, 189, 12);
+  font-size: 14px;
+  display: none;
+
+
+}
 .checkbox-container {
   display: flex;
   justify-content: space-between;

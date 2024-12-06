@@ -21,6 +21,7 @@ document.querySelector(".login-form").addEventListener("submit", function (e) {
 // Select the "Use token" checkbox
 const useTokenCheckbox = document.getElementById("useToken");
 const tokenCont = document.getElementById("token-cont");
+const sucMsg = document.getElementById("succ-msg");
 
 // Check if the checkbox is checked
 if (useTokenCheckbox.checked) {
@@ -74,6 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Send data to the mock API
     try {
+      submitButton.textContent = "logging in"
+      submitButton.disabled = true
+      // sucMsg.style.display = "block"
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -83,6 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         const responseData = await response.json();
         console.log("Data submitted successfully:", responseData);
+        sucMsg.style.display = "block"
+         submitButton.textContent = "Sign in";
+         submitButton.disabled = false;
       } else {
         console.error(
           "Failed to submit data:",
