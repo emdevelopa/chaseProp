@@ -1,0 +1,230 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.background {
+  background: url("https://static.chasecdn.com/content/geo-images/images/background.tablet.night.1.jpeg")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 330px;
+  margin-bottom: 2em;
+}
+.logo {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+.logo img {
+  max-width: 220px;
+  margin-bottom: 1rem;
+}
+
+.login-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  font-size: 16px;
+  color: #b1b1b1;
+  margin-bottom: 0.5rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  border: 0 solid grey;
+  border-width: 0 0 1px 0;
+}
+
+.password-container .show-password {
+  background: none;
+  border: none;
+  color: #0071ce;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.error {
+  color: #cb0e0ec9;
+  font-size: 11px;
+  display: none;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 300px; Adjust width to fit your layout */
+  margin: 20px auto;
+}
+
+.checkbox-label {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  color: gray;
+
+  /* background: #000; */
+  gap: 1em;
+}
+
+.checkbox-label input[type="checkbox"] {
+  height: 1.8em;
+  width: 1.8em;
+  border: 2px solid rgb(199, 199, 199);
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: #0071ce; /* Background when checked */
+  border-color: #0071ce;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+  content: "✔"; /* Unicode for checkmark */
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-in-button {
+  background: #0071ce;
+  color: #fff;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.sign-in-button:hover {
+  background: #005bb5;
+}
+
+.links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.links a {
+  color: #0071ce;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.footer-cont {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  display: flex;
+  background-color: white;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  border-bottom: 1px solid rgb(219, 219, 219); /* Adds a bottom border */
+}
+
+footer p {
+  font-size: 18px;
+}
+
+.social-icons i {
+  font-size: 22px;
+  width: 20px;
+  margin: 0 8px;
+}
+
+.footer2 {
+  font-size: 0.8rem;
+  background-color: white;
+  color: grey;
+  text-align: center;
+  /* border-top: 1px solid grey; */
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  color: grey;
+  font-size: 0.8rem;
+}
+.footer-links .none-link {
+  text-decoration: none; /* Removes the underline */
+  cursor: default; /* Removes the pointer cursor */
+  color: inherit; /* Makes the text take the color of its parent */
+  pointer-events: none; /* Disables click interactions */
+}
+
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+  margin: 0;
+  color: grey;
+}
